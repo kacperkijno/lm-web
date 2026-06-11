@@ -263,7 +263,7 @@
 .lm-contact .lm-btn--ghost:hover{ background:var(--gold-light); color:var(--navy); }
 
 /* ============================ STICKY BAR MOBILNY ============================ */
-.lm-sbar{ position:fixed; left:0; right:0; bottom:0; z-index:900; display:grid; grid-template-columns:1fr 1.25fr; gap:10px; background:var(--navy); padding:10px 12px calc(10px + env(safe-area-inset-bottom)); box-shadow:0 -8px 24px -12px rgba(0,53,102,.5); font-family:var(--font-sans); }
+.lm-sbar{ position:fixed; left:0; right:0; bottom:0; z-index:99999 !important; display:grid; grid-template-columns:1fr 1.25fr; gap:10px; background:var(--navy); padding:10px 12px calc(10px + env(safe-area-inset-bottom)); box-shadow:0 -8px 24px -12px rgba(0,53,102,.5); font-family:var(--font-sans); }
 .lm-sbar a{ display:flex; align-items:center; justify-content:center; gap:8px; height:50px; border-radius:var(--radius-pill); font:600 14.5px/1 var(--font-headline); letter-spacing:.01em; text-decoration:none; }
 .lm-sbar__call{ color:var(--gold-light); border:1.5px solid rgba(220,182,95,.55); }
 .lm-sbar__call:active{ background:rgba(220,182,95,.12); }
