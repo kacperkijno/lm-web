@@ -131,7 +131,7 @@
 /* ============================ SEKCJA 2 — PROBLEM ("znasz to?") ============================ */
 .lm-prob__grid{ margin-top:8px; display:grid; gap:clamp(36px,5vw,56px); }
 .lm-prob__left{ position:static; }
-@media(min-width:900px){ .lm-prob__grid{ grid-template-columns:0.82fr 1.18fr; gap:80px; align-items:start; } .lm-prob__left{ position:sticky; top:96px; } }
+@media(min-width:900px){ .lm-prob__grid{ grid-template-columns:0.82fr 1.18fr; gap:80px; align-items:start; } }
 .lm-prob__head{ max-width:720px; }
 .lm-prob__lede{ max-width:38ch; }
 .lm-prob__more{ margin-top:30px; display:inline-flex; align-items:center; gap:9px; font:600 13px/1 var(--font-headline); letter-spacing:.08em; text-transform:uppercase; color:var(--gold); }
