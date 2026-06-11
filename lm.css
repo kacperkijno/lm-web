@@ -170,7 +170,7 @@
 
 /* ============================ SEKCJA 4 — OPINIE (marquee) ============================ */
 .lm-quotes{ margin-top:80px; width:100%; overflow:hidden; padding:8px 0 14px; }
-.lm-quotes-track{ display:flex; width:max-content; animation:lm-marquee 55s linear infinite; }
+.lm-quotes-track{ display:flex; flex-wrap:nowrap; width:-webkit-max-content; width:max-content; animation:lm-marquee 55s linear infinite; will-change:transform; -webkit-backface-visibility:hidden; backface-visibility:hidden; }
 .lm-quotes:hover .lm-quotes-track{ animation-play-state:paused; }
 @keyframes lm-marquee{ from{ transform:translateX(0); } to{ transform:translateX(-33.3333%); } }
 .lm-quote{ flex:0 0 clamp(280px,80vw,348px); min-height:450px; margin:0 24px 0 0; display:flex; flex-direction:column; gap:18px; padding:32px 30px; border-radius:var(--radius-lg); background:var(--bg-elevated); box-shadow:var(--shadow-card); }
