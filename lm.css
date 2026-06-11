@@ -142,3 +142,21 @@
 .lm-prob__card h3{ grid-column:1; grid-row:1; margin:0; font:400 clamp(19px,2.5vw,22px)/1.2 var(--font-headline); color:var(--navy); letter-spacing:-.01em; }
 .lm-prob__card p{ grid-column:1; grid-row:2; margin:32px 0 0; font:400 15.5px/1.6 var(--font-sans); color:color-mix(in srgb,var(--ink) 64%,transparent); max-width:48ch; }
 .lm-prob__card p b{ color:var(--navy); font-weight:600; }
+
+/* ============================ SEKCJA 3 — OFERTA (01-04) ============================ */
+.lm-offer{ margin-top:8px; }
+.lm-offer__row{ display:grid; gap:12px 44px; align-items:start; padding:64px 0; border-top:1px solid var(--border-soft); }
+.lm-offer__num{ font:italic 500 clamp(54px,12vw,82px)/0.78 var(--font-display); color:var(--gold); }
+.lm-offer__body h3{ margin:0 0 12px; font:300 clamp(22px,5.4vw,27px)/1.16 var(--font-headline); color:var(--navy); letter-spacing:-.01em; }
+.lm-offer__body p{ margin:0; font:400 16px/1.65 var(--font-sans); color:color-mix(in srgb,var(--ink) 70%,transparent); max-width:54ch; }
+@media(min-width:760px){
+  .lm-offer__row{ grid-template-columns:130px 1fr; }
+  .lm-offer__row--rev{ grid-template-columns:1fr 130px; }
+  .lm-offer__row--rev .lm-offer__num{ order:2; text-align:right; }
+  .lm-offer__row--rev .lm-offer__body{ order:1; }
+  .lm-offer__row--rev .lm-offer__body h3, .lm-offer__row--rev .lm-offer__body p{ text-align:right; margin-left:auto; }
+}
+.lm-offer__pull{ margin:50px 0 0; padding:48px 0 0; border-top:1px solid var(--border-soft); font:italic 400 clamp(21px,5.6vw,28px)/1.34 var(--font-display); color:var(--navy); max-width:720px; text-wrap:pretty; }
+.lm-offer__pull b{ font-family:var(--font-headline); font-style:normal; font-weight:400; color:var(--navy); }
+.lm-offer__small{ margin:18px 0 0; font:400 14px/1.6 var(--font-sans); color:color-mix(in srgb,var(--ink) 56%,transparent); }
+.lm-offer__cta{ margin-top:64px; }
