@@ -303,3 +303,28 @@
 .lm-ctaband .lm-btn--primary:hover{ filter:brightness(.95); }
 .lm-ctaband .lm-btn--ghost{ color:var(--gold-light); border-color:var(--gold-light); }
 .lm-ctaband .lm-btn--ghost:hover{ background:var(--gold-light); color:var(--navy); }
+
+/* ============================ WZÓR ARTYKUŁU (wpis) ============================ */
+/* tytuł wpisu (WebWave daje h1 na biało -> nadpisujemy na granat, Bricolage) */
+.news_element.h1_default_block, .news_element{ font-family:var(--font-headline) !important; font-weight:300 !important; font-size:clamp(28px,5vw,44px) !important; line-height:1.12 !important; color:var(--navy) !important; letter-spacing:-.02em !important; }
+.news_date_format{ font-family:var(--font-sans) !important; text-transform:uppercase; letter-spacing:.14em; font-size:12px !important; color:var(--gold) !important; }
+
+/* breadcrumb */
+.lm-crumbs{ font:500 12.5px/1.5 var(--font-sans); color:color-mix(in srgb,var(--ink) 52%,transparent); }
+.lm-crumbs a{ color:color-mix(in srgb,var(--ink) 52%,transparent); text-decoration:none; }
+.lm-crumbs a:hover{ color:var(--gold); }
+.lm-crumbs .sep{ margin:0 8px; color:var(--gold); }
+
+/* CTA w treści wpisu */
+.lm-incta{ margin:8px 0; padding:32px; border-radius:var(--radius-lg); background:var(--bg-elevated); box-shadow:var(--shadow-card); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px; }
+.lm-incta *{ box-sizing:border-box; }
+.lm-incta p{ margin:0; font:400 16px/1.5 var(--font-sans); color:var(--navy); max-width:40ch; }
+@media(max-width:640px){ .lm-incta .lm-btn{ width:100%; } }
+
+/* box autora pod wpisem */
+.lm-author{ margin:8px 0; padding-top:28px; border-top:1px solid var(--border-soft); display:flex; gap:18px; align-items:center; }
+.lm-author *{ box-sizing:border-box; }
+.lm-author__photo{ width:64px; height:64px; border-radius:50%; overflow:hidden; flex:none; box-shadow:var(--shadow-card); }
+.lm-author__photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+.lm-author b{ display:block; font:500 15px/1.3 var(--font-headline); color:var(--navy); }
+.lm-author span{ font:400 13.5px/1.5 var(--font-sans); color:color-mix(in srgb,var(--ink) 58%,transparent); }
