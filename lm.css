@@ -160,3 +160,19 @@
 .lm-offer__pull b{ font-family:var(--font-headline); font-style:normal; font-weight:400; color:var(--navy); }
 .lm-offer__small{ margin:18px 0 0; font:400 14px/1.6 var(--font-sans); color:color-mix(in srgb,var(--ink) 56%,transparent); }
 .lm-offer__cta{ margin-top:64px; display:flex; justify-content:flex-end; }
+
+/* ============================ SEKCJA 4 — OPINIE (marquee) ============================ */
+.lm-quotes{ margin-top:clamp(32px,5vw,56px); width:100%; overflow:hidden; padding:8px 0 14px; }
+.lm-quotes-track{ display:flex; width:max-content; animation:lm-marquee 55s linear infinite; }
+.lm-quotes:hover .lm-quotes-track{ animation-play-state:paused; }
+@keyframes lm-marquee{ from{ transform:translateX(0); } to{ transform:translateX(-33.3333%); } }
+.lm-quote{ flex:0 0 clamp(280px,80vw,348px); margin:0 24px 0 0; display:flex; flex-direction:column; gap:18px; padding:32px 30px; border-radius:var(--radius-lg); background:var(--bg-elevated); box-shadow:var(--shadow-card); }
+.lm-quote p{ margin:0; font:400 15.5px/1.7 var(--font-sans); color:var(--ink); }
+.lm-quote__sig{ margin-top:auto; padding-top:6px; }
+.lm-quote__name{ font:italic 500 26px/1 var(--font-display); color:var(--navy); }
+@media(prefers-reduced-motion:reduce){ .lm-quotes{ overflow-x:auto; } .lm-quotes-track{ animation:none; } }
+.lm-proof__stats{ margin-top:32px; display:flex; flex-wrap:wrap; gap:10px 22px; align-items:center; padding-top:24px; border-top:1px solid var(--border-soft); font:500 14px/1.4 var(--font-sans); color:color-mix(in srgb,var(--ink) 64%,transparent); }
+.lm-proof__stats .stars{ color:var(--gold); letter-spacing:2px; }
+.lm-proof__stats b{ color:var(--navy); font-weight:400; }
+.lm-proof__stats .dot{ width:3px; height:3px; border-radius:50%; background:var(--gold); opacity:.7; }
+.lm-proof__cta{ margin-top:40px; display:flex; flex-wrap:wrap; gap:12px; }
