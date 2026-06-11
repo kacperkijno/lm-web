@@ -200,7 +200,7 @@
 .lm-about__sig b{ display:block; font:500 15px/1.3 var(--font-headline); color:var(--navy); }
 .lm-about__sig span{ font:400 13px/1.4 var(--font-sans); color:color-mix(in srgb,var(--ink) 56%,transparent); }
 .lm-about__body{ font:400 16px/1.75 var(--font-sans); color:color-mix(in srgb,var(--ink) 74%,transparent); max-width:56ch; margin:0; }
-.lm-about__copy .lm-about__body:first-of-type{ margin-top:48px; }
+.lm-about__copy h2 + .lm-about__body{ margin-top:48px; }
 .lm-about__body + .lm-about__body{ margin-top:14px; }
 .lm-about__body strong{ color:var(--navy); font-weight:600; }
 .lm-creds{ margin:64px 0 0; border-top:1px solid var(--border-soft); }
@@ -214,7 +214,7 @@
 .lm-creds__when{ font:italic 500 16px/1.3 var(--font-display); color:var(--gold); white-space:nowrap; }
 .lm-creds__org{ display:block; margin-top:3px; font:400 12.5px/1.4 var(--font-sans); color:color-mix(in srgb,var(--ink) 48%,transparent); }
 .lm-creds__base{ margin:18px 0 0; font:400 13.5px/1.6 var(--font-sans); color:color-mix(in srgb,var(--ink) 56%,transparent); max-width:56ch; }
-.lm-about__contact{ margin-top:48px; display:flex; flex-direction:column; align-items:flex-start; gap:16px; }
+.lm-about__contact{ margin-top:48px; display:flex; flex-direction:column; align-items:flex-end; gap:16px; text-align:right; }
 .lm-about__mail{ font:500 14px/1.5 var(--font-sans); color:var(--gold); border-bottom:1px solid color-mix(in srgb,var(--gold) 40%,transparent); }
 .lm-about__mail:hover{ border-bottom-color:var(--gold); }
 
@@ -227,3 +227,15 @@
 .lm-price__meta{ margin:12px auto 0; max-width:34ch; font:400 14px/1.5 var(--font-sans); color:color-mix(in srgb,var(--ink) 60%,transparent); }
 .lm-price__cta{ margin-top:28px; }
 .lm-price__note{ margin:24px auto 0; max-width:480px; text-align:center; font:400 13.5px/1.6 var(--font-sans); color:color-mix(in srgb,var(--ink) 55%,transparent); }
+
+/* ============================ SEKCJA 8 — FAQ (akordeon) ============================ */
+.lm-faq{ margin-top:80px; max-width:840px; }
+.lm-faq__item{ border-top:1px solid var(--border-soft); }
+.lm-faq__item:first-of-type{ border-top:0; }
+.lm-faq__item summary{ list-style:none; cursor:pointer; padding:24px 46px 24px 0; position:relative; font:400 clamp(17px,4.6vw,20px)/1.4 var(--font-headline); color:var(--navy); }
+.lm-faq__item summary::-webkit-details-marker{ display:none; }
+.lm-faq__item summary::after{ content:""; position:absolute; right:2px; top:50%; transform:translateY(-50%); width:13px; height:13px; background:linear-gradient(var(--gold),var(--gold)) center/13px 1.5px no-repeat, linear-gradient(var(--gold),var(--gold)) center/1.5px 13px no-repeat; }
+.lm-faq__item[open] summary::after{ background:linear-gradient(var(--gold),var(--gold)) center/13px 1.5px no-repeat; }
+.lm-faq__answer{ margin:0; padding:0 46px 26px 0; font:400 16px/1.7 var(--font-sans); color:color-mix(in srgb,var(--ink) 70%,transparent); max-width:66ch; }
+.lm-faq__more{ margin:64px 0 0; font:400 15px/1.6 var(--font-sans); color:color-mix(in srgb,var(--ink) 62%,transparent); }
+.lm-faq__more a{ color:var(--gold); font-weight:600; }
