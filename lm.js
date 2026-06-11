@@ -24,9 +24,16 @@
       });
     });
   }
+  // Sticky-bar mobilny: WebWave trzyma go w sekcji (transform => zepsuty fixed/z-index).
+  // Przenosimy go do <body>, żeby przykleił się do ekranu i był na wierzchu.
+  function initStickyBar(){
+    var bar = document.querySelector('.lm-sbar');
+    if(bar && bar.parentElement !== document.body){ document.body.appendChild(bar); }
+  }
+  function init(){ initNav(); initStickyBar(); }
   if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', initNav);
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    initNav();
+    init();
   }
 })();
