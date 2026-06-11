@@ -307,10 +307,21 @@
 /* ============================ WZÓR ARTYKUŁU (wpis) ============================ */
 /* tytuł wpisu (WebWave daje h1 na biało -> nadpisujemy na granat, Bricolage) */
 .news_element.h1_default_block, .news_element{ font-family:var(--font-headline) !important; font-weight:300 !important; font-size:clamp(28px,5vw,44px) !important; line-height:1.12 !important; color:var(--navy) !important; letter-spacing:-.02em !important; }
-.news_date_format{ font-family:var(--font-sans) !important; text-transform:uppercase; letter-spacing:.14em; font-size:12px !important; color:var(--gold) !important; }
+/* data wpisu — granat, jak w makiecie (nie złota wersalikowa) */
+.news_date_format{ font-family:var(--font-sans) !important; font-weight:600 !important; font-size:13px !important; line-height:1.4 !important; letter-spacing:0 !important; text-transform:none !important; color:var(--navy) !important; }
 
-/* breadcrumb */
-.lm-crumbs{ font:500 12.5px/1.5 var(--font-sans); color:color-mix(in srgb,var(--ink) 52%,transparent); }
+/* autorka w nagłówku wpisu — element_874 (tekst "Liliana Masłowska"; ID unikalny w witrynie i stały dla szablonu wpisu).
+   Noto Sans = pełne polskie znaki (naprawia znikające "ł" na żywo), kolor stonowany jak meta w makiecie. */
+#element_874 .wwTextContent, #element_874 .wwTextContent p{ font-family:var(--font-sans) !important; font-weight:500 !important; font-size:13.5px !important; line-height:1.4 !important; color:color-mix(in srgb,var(--ink) 56%,transparent) !important; }
+
+/* zdjęcie nagłówkowe wpisu — element_252 (obraz hero szablonu wpisu).
+   Sygnaturowy narożnik (jak hero w makiecie) + miękki cień. Radius nie zmienia wysokości, więc jest bezpieczny. */
+#element_252 .ww_image_wrapper{ border-radius:48px 12px 12px 12px !important; overflow:hidden !important; box-shadow:var(--shadow-image); }
+
+/* breadcrumb — wyrównanie do kolumny treści (przestaje uciekać w lewo poza krawędź).
+   Element jest fullwidth (1350px, left:-75px); centrujemy zawartość do tej samej osi co .lm-wrap. */
+.lm-crumbs{ max-width:1200px; margin-inline:auto; padding-inline:22px; box-sizing:border-box; font:500 12.5px/1.5 var(--font-sans); color:color-mix(in srgb,var(--ink) 52%,transparent); }
+@media(min-width:760px){ .lm-crumbs{ padding-inline:40px; } }
 .lm-crumbs a{ color:color-mix(in srgb,var(--ink) 52%,transparent); text-decoration:none; }
 .lm-crumbs a:hover{ color:var(--gold); }
 .lm-crumbs .sep{ margin:0 8px; color:var(--gold); }
