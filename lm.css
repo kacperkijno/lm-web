@@ -1,0 +1,82 @@
+/* =========================================================================
+   lm.css — wspólny arkusz LM dla WebWave
+   Hostuj na GitHub Pages lub jsDelivr (NIE raw.githubusercontent — MIME blok).
+   Linkuj raz w <head> WebWave. Fonty ładuj osobnym <link> w <head> (szybciej).
+   WSZYSTKO scope'owane (.lm-nav / .lm-ftr / .feed_*) — nic globalnego,
+   żeby nie wyciekło na natywne elementy WebWave.
+   Wersjonuj przy zmianie: lm.css?v=2  (albo tag @v2 na jsDelivr).
+   ========================================================================= */
+
+:root{
+  --navy:#003566; --ink:#1a1e29; --gold:#966e14; --gold-light:#dcb65f; --cream:#f7f3e9;
+  --bg-elevated:#fffbf2;
+  --border-soft:rgba(0,53,102,.18);
+  --font-headline:'Bricolage Grotesque','Inter',system-ui,sans-serif;
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-sans:'Noto Sans',-apple-system,'Segoe UI',system-ui,sans-serif;
+  --radius-lg:16px; --radius-pill:999px; --radius-image:8px;
+  --shadow-card:0 6px 18px -10px rgba(0,53,102,.14);
+  --ease-out:cubic-bezier(.2,.7,.25,1); --dur-base:260ms; --dur-slow:480ms;
+}
+
+/* ============================ NAV ============================ */
+.lm-nav{ position:sticky; top:0; z-index:1000;
+  background:rgba(247,243,233,.88); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border-soft); font-family:var(--font-sans); }
+.lm-nav *{ box-sizing:border-box; }
+.lm-nav a{ color:inherit; text-decoration:none; }
+.lm-nav__in{ max-width:1200px; margin:0 auto; padding:0 22px; height:72px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+@media(min-width:760px){ .lm-nav__in{ padding:0 40px; } }
+.lm-nav__brand img{ height:40px; width:auto; display:block; }
+.lm-nav__links{ display:none; align-items:center; gap:24px; margin:0; }
+.lm-nav__links a{ font:400 10px/1 var(--font-headline); letter-spacing:.1em; text-transform:uppercase; color:rgba(26,30,41,.78); padding:6px 0; border-bottom:1px solid transparent; transition:color .2s, border-color .2s; white-space:nowrap; }
+.lm-nav__links a:hover, .lm-nav__links a.is-active{ color:var(--gold); border-bottom-color:var(--gold); }
+.lm-nav__cta{ display:none; }
+.lm-nav__btn{ display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:11px 20px; border-radius:var(--radius-pill); font:400 13.5px/1 var(--font-headline); letter-spacing:.02em; border:1.5px solid var(--gold); background:var(--gold); color:var(--cream); cursor:pointer; transition:filter .2s; }
+.lm-nav__btn:hover{ filter:brightness(.93); }
+.lm-nav__burger{ display:inline-flex; flex-direction:column; justify-content:center; gap:5px; width:44px; height:44px; padding:11px; background:none; border:0; cursor:pointer; }
+.lm-nav__burger span{ display:block; height:2px; width:100%; background:var(--navy); border-radius:2px; transition:transform .25s, opacity .25s; }
+.lm-nav.is-open .lm-nav__burger span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.lm-nav.is-open .lm-nav__burger span:nth-child(2){ opacity:0; }
+.lm-nav.is-open .lm-nav__burger span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+.lm-nav__panel{ display:none; flex-direction:column; padding:6px 22px 20px; border-top:1px solid rgba(0,53,102,.12); background:rgba(247,243,233,.97); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); }
+.lm-nav.is-open .lm-nav__panel{ display:flex; }
+.lm-nav__panel a:not(.lm-nav__btn){ padding:14px 0; font:500 15px/1.2 var(--font-sans); color:var(--navy); border-bottom:1px solid rgba(0,53,102,.08); }
+.lm-nav__panel .lm-nav__btn{ margin-top:16px; }
+@media(min-width:992px){
+  .lm-nav__links{ display:flex; }
+  .lm-nav__cta{ display:block; }
+  .lm-nav__burger{ display:none; }
+  .lm-nav__panel{ display:none !important; }
+}
+
+/* ============================ STOPKA ============================ */
+.lm-ftr{ background:var(--navy); color:var(--cream); font-family:var(--font-sans); }
+.lm-ftr *{ box-sizing:border-box; }
+.lm-ftr a{ color:inherit; text-decoration:none; }
+.lm-ftr__in{ max-width:1200px; margin:0 auto; padding:44px 22px 40px; }
+@media(min-width:760px){ .lm-ftr__in{ padding-left:40px; padding-right:40px; } }
+.lm-ftr__top{ display:flex; flex-direction:column; gap:26px; align-items:flex-start; }
+@media(min-width:760px){ .lm-ftr__top{ flex-direction:row; align-items:center; justify-content:space-between; } }
+.lm-ftr__brand img{ height:50px; width:auto; display:block; }
+.lm-ftr__nav{ display:flex; flex-wrap:wrap; gap:8px 22px; }
+.lm-ftr__nav a{ font:500 14px/1.4 var(--font-sans); color:rgba(247,243,233,.82); border-bottom:1px solid transparent; transition:color .2s, border-color .2s; }
+.lm-ftr__nav a:hover{ color:var(--gold-light); border-bottom-color:var(--gold-light); }
+.lm-ftr__fine{ display:flex; flex-wrap:wrap; gap:6px 18px; justify-content:space-between; margin-top:34px; padding-top:20px; border-top:1px solid rgba(220,182,95,.14); font:500 12.5px/1.5 var(--font-sans); color:rgba(220,182,95,.8); }
+.lm-ftr__fine a{ border-bottom:1px solid transparent; transition:border-color .2s; }
+.lm-ftr__fine a:hover{ border-bottom-color:var(--gold-light); }
+.lm-ftr__author{ margin:16px 0 0; font:500 11.5px/1.4 var(--font-sans); letter-spacing:.02em; color:rgba(220,182,95,.52); }
+.lm-ftr__author a{ color:var(--gold-light); border-bottom:1px solid transparent; transition:border-color .2s; }
+.lm-ftr__author a:hover{ border-bottom-color:var(--gold-light); }
+
+/* ============================ SKIN LISTY BLOGA (.feed_* WebWave) ============================ */
+.feed_item a, .feed_name_link, .feed_read_more, .feed_short_link, .feed_date a { text-decoration:none !important; }
+.feed_thumbnail_wrapper, .feed_thumbnail { overflow:hidden !important; border-radius:var(--radius-image) !important; }
+.feed_thumbnail_image { object-fit:cover !important; transition:transform var(--dur-slow) var(--ease-out); }
+.feed_item:hover .feed_thumbnail_image { transform:scale(1.045); }
+.feed_name_link { font-family:var(--font-headline) !important; font-weight:400 !important; color:var(--navy) !important; letter-spacing:-.01em; line-height:1.32 !important; }
+.feed_name_link:hover { color:var(--gold) !important; }
+.feed_date { font-family:var(--font-sans) !important; text-transform:uppercase; letter-spacing:.14em; font-size:11px !important; color:var(--gold) !important; }
+.feed_short { font-family:var(--font-sans) !important; color:rgba(26,30,41,.62) !important; line-height:1.6 !important; }
+.feed_read_more, .feed_short_link { font-family:var(--font-headline) !important; font-weight:600 !important; text-transform:uppercase; letter-spacing:.12em; font-size:11px !important; color:var(--gold) !important; }
+.feed_pagination_icon, .feed_pagination_next_icon, .feed_pagination_prev_icon { color:var(--gold) !important; }
