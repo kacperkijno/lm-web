@@ -226,7 +226,7 @@
 .lm-price__amt{ margin:14px 0 0; font:300 clamp(40px,9vw,56px)/1 var(--font-headline); color:var(--navy); letter-spacing:-.02em; }
 .lm-price__amt span{ font-size:.45em; color:color-mix(in srgb,var(--ink) 55%,transparent); }
 .lm-price__meta{ margin:12px auto 0; max-width:34ch; font:400 14px/1.5 var(--font-sans); color:color-mix(in srgb,var(--ink) 60%,transparent); }
-.lm-price__cta{ margin-top:28px; }
+.lm-price__cta{ display:block; margin-top:28px; }
 .lm-price__note{ margin:24px auto 0; max-width:480px; text-align:center; font:400 13.5px/1.6 var(--font-sans); color:color-mix(in srgb,var(--ink) 55%,transparent); }
 
 /* ============================ SEKCJA 8 — FAQ (akordeon) ============================ */
