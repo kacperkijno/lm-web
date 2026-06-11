@@ -286,6 +286,8 @@
 
 /* ============================ SEKCJA BLOG (home): nagłówek + linki wokół natywnej listy ============================ */
 .lm-blog__head{ padding-top:clamp(96px,12vw,140px); padding-bottom:clamp(40px,5vw,56px); }
+/* nagłówek pod eyebrow (np. "powiązane wpisy" w bloku #element_876 wpisu) — granat, jak makieta */
+.lm-blog__title{ margin:10px 0 0; font:300 clamp(24px,5vw,32px)/1.1 var(--font-headline); letter-spacing:-.02em; color:var(--navy); }
 .lm-blog__foot{ padding-top:clamp(40px,5vw,56px); padding-bottom:clamp(96px,12vw,140px); }
 .lm-blog__all{ margin:0 0 0 auto; width:fit-content; display:flex; align-items:center; gap:8px; font:600 11px/1 var(--font-headline); letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid transparent; transition:border-color .2s var(--ease-out); }
 .lm-blog__all:hover{ border-bottom-color:var(--gold); }
