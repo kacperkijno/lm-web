@@ -220,7 +220,8 @@
 
 /* ============================ SEKCJA 7 — CENNIK ============================ */
 .lm-price{ margin-top:80px; }
-.lm-price__card{ max-width:480px; margin:0 auto; background:var(--bg-elevated); border:1px solid var(--border-soft); border-radius:var(--radius-lg); box-shadow:var(--shadow-card); padding:clamp(32px,5vw,48px); text-align:center; }
+.lm-price__card{ display:block; max-width:480px; margin:0 auto; background:var(--bg-elevated); border:1px solid var(--border-soft); border-radius:var(--radius-lg); box-shadow:var(--shadow-card); padding:clamp(32px,5vw,48px); text-align:center; transition:transform .25s var(--ease-out), box-shadow .25s var(--ease-out); }
+.lm-price__card:hover{ transform:translateY(-3px); box-shadow:var(--shadow-image); }
 .lm-price__svc{ font:italic 500 26px/1.1 var(--font-display); color:var(--gold); }
 .lm-price__amt{ margin:14px 0 0; font:300 clamp(40px,9vw,56px)/1 var(--font-headline); color:var(--navy); letter-spacing:-.02em; }
 .lm-price__amt span{ font-size:.45em; color:color-mix(in srgb,var(--ink) 55%,transparent); }
