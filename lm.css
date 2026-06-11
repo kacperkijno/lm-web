@@ -78,7 +78,7 @@
 .feed_name_link { font-family:var(--font-headline) !important; font-weight:400 !important; color:var(--navy) !important; letter-spacing:-.01em; line-height:1.32 !important; }
 .feed_name_link:hover { color:var(--gold) !important; }
 .feed_date { font-family:var(--font-sans) !important; text-transform:uppercase; letter-spacing:.14em; font-size:11px !important; color:var(--gold) !important; }
-.feed_short { font-family:var(--font-sans) !important; color:rgba(26,30,41,.62) !important; line-height:1.6 !important; }
+.feed_short { font-family:var(--font-sans) !important; font-size:15px !important; color:rgba(26,30,41,.62) !important; line-height:1.6 !important; }
 .feed_read_more, .feed_short_link { font-family:var(--font-headline) !important; font-weight:600 !important; text-transform:uppercase; letter-spacing:.12em; font-size:11px !important; color:var(--gold) !important; }
 .feed_pagination_icon, .feed_pagination_next_icon, .feed_pagination_prev_icon { color:var(--gold) !important; }
 
@@ -279,8 +279,9 @@
 }
 
 /* ============================ SEKCJA BLOG (home): nagłówek + linki wokół natywnej listy ============================ */
-.lm-blog__head{ margin-bottom:clamp(40px,5vw,56px); }
-.lm-blog__all{ margin:48px 0 0 auto; width:fit-content; display:flex; align-items:center; gap:8px; font:600 11px/1 var(--font-headline); letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid transparent; transition:border-color .2s var(--ease-out); }
+.lm-blog__head{ padding-top:clamp(96px,12vw,140px); padding-bottom:clamp(40px,5vw,56px); }
+.lm-blog__foot{ padding-top:clamp(40px,5vw,56px); padding-bottom:clamp(96px,12vw,140px); }
+.lm-blog__all{ margin:0 0 0 auto; width:fit-content; display:flex; align-items:center; gap:8px; font:600 11px/1 var(--font-headline); letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid transparent; transition:border-color .2s var(--ease-out); }
 .lm-blog__all:hover{ border-bottom-color:var(--gold); }
 .lm-blog__soft{ margin:48px 0 0; font:400 15px/1.6 var(--font-sans); color:color-mix(in srgb,var(--ink) 64%,transparent); }
 .lm-blog__soft a{ color:var(--gold); font-weight:600; border-bottom:1px solid color-mix(in srgb,var(--gold) 45%,transparent); transition:border-color .2s var(--ease-out); }
