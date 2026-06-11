@@ -203,10 +203,14 @@
 .lm-about__copy .lm-about__body:first-of-type{ margin-top:48px; }
 .lm-about__body + .lm-about__body{ margin-top:14px; }
 .lm-about__body strong{ color:var(--navy); font-weight:600; }
-.lm-creds__label{ margin:64px 0 0; font:600 11px/1 var(--font-headline); letter-spacing:.18em; text-transform:uppercase; color:var(--gold); }
-.lm-creds{ list-style:none; margin:16px 0 0; padding:0; }
-.lm-creds li{ display:grid; grid-template-columns:64px 1fr; gap:18px; padding:22px 0; border-top:1px solid var(--border-soft); font:400 14.5px/1.5 var(--font-sans); color:color-mix(in srgb,var(--ink) 72%,transparent); }
-.lm-creds li:last-child{ border-bottom:1px solid var(--border-soft); }
+.lm-creds{ margin:64px 0 0; border-top:1px solid var(--border-soft); }
+.lm-creds > summary{ list-style:none; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:22px 0; font:600 11px/1 var(--font-headline); letter-spacing:.18em; text-transform:uppercase; color:var(--gold); }
+.lm-creds > summary::-webkit-details-marker{ display:none; }
+.lm-creds > summary::after{ content:""; width:11px; height:11px; flex:none; background:linear-gradient(var(--gold),var(--gold)) center/11px 1.5px no-repeat, linear-gradient(var(--gold),var(--gold)) center/1.5px 11px no-repeat; }
+.lm-creds[open] > summary::after{ background:linear-gradient(var(--gold),var(--gold)) center/11px 1.5px no-repeat; }
+.lm-creds__list{ list-style:none; margin:0 0 8px; padding:0; }
+.lm-creds__list li{ display:grid; grid-template-columns:64px 1fr; gap:18px; padding:22px 0; border-top:1px solid var(--border-soft); font:400 14.5px/1.5 var(--font-sans); color:color-mix(in srgb,var(--ink) 72%,transparent); }
+.lm-creds__list li:last-child{ border-bottom:1px solid var(--border-soft); }
 .lm-creds__when{ font:italic 500 16px/1.3 var(--font-display); color:var(--gold); white-space:nowrap; }
 .lm-creds__base{ margin:18px 0 0; font:400 13.5px/1.6 var(--font-sans); color:color-mix(in srgb,var(--ink) 56%,transparent); max-width:56ch; }
 .lm-about__contact{ margin-top:48px; display:flex; flex-direction:column; align-items:flex-start; gap:16px; }
