@@ -125,7 +125,7 @@
 @media(min-width:760px){ .lm-section{ padding-block:140px; } }
 .lm-eyebrow{ display:inline-block; margin:0; font:600 12px/1 var(--font-headline); letter-spacing:.22em; text-transform:uppercase; color:var(--gold); }
 .lm-h2{ font:300 clamp(34px,8.4vw,60px)/1.04 var(--font-headline); letter-spacing:-.02em; color:var(--navy); margin:12px 0 0; text-wrap:balance; }
-.lm-lede{ font:400 16px/1.6 var(--font-sans); color:color-mix(in srgb,var(--ink) 78%,transparent); margin:36px 0 0; max-width:48ch; text-wrap:pretty; }
+.lm-lede{ font:400 16px/1.6 var(--font-sans); color:color-mix(in srgb,var(--ink) 78%,transparent); margin:48px 0 0; max-width:48ch; text-wrap:pretty; }
 .lm-it{ font-family:var(--font-display); font-style:italic; font-weight:500; }
 
 /* ============================ SEKCJA 2 — PROBLEM ("znasz to?") ============================ */
@@ -144,7 +144,7 @@
 .lm-prob__card p b{ color:var(--navy); font-weight:600; }
 
 /* ============================ SEKCJA 3 — OFERTA (01-04) ============================ */
-.lm-offer{ margin-top:clamp(56px,7vw,88px); }
+.lm-offer{ margin-top:80px; }
 .lm-offer__row{ display:grid; gap:12px 44px; align-items:start; padding:64px 0; border-top:1px solid var(--border-soft); }
 .lm-offer__num{ font:italic 500 clamp(54px,12vw,82px)/0.78 var(--font-display); color:var(--gold); }
 .lm-offer__body h3{ margin:0 0 12px; font:300 clamp(22px,5.4vw,27px)/1.16 var(--font-headline); color:var(--navy); letter-spacing:-.01em; }
@@ -162,7 +162,7 @@
 .lm-offer__cta{ margin-top:64px; display:flex; justify-content:flex-end; }
 
 /* ============================ SEKCJA 4 — OPINIE (marquee) ============================ */
-.lm-quotes{ margin-top:clamp(56px,7vw,88px); width:100%; overflow:hidden; padding:8px 0 14px; }
+.lm-quotes{ margin-top:80px; width:100%; overflow:hidden; padding:8px 0 14px; }
 .lm-quotes-track{ display:flex; width:max-content; animation:lm-marquee 55s linear infinite; }
 .lm-quotes:hover .lm-quotes-track{ animation-play-state:paused; }
 @keyframes lm-marquee{ from{ transform:translateX(0); } to{ transform:translateX(-33.3333%); } }
