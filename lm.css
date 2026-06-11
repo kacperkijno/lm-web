@@ -329,13 +329,13 @@
 .lm-crumbs .sep{ margin:0 8px; color:var(--gold); }
 
 /* CTA w treści wpisu */
-.lm-incta{ margin:8px 0; padding:32px; border-radius:var(--radius-lg); background:var(--bg-elevated); box-shadow:var(--shadow-card); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px; }
+.lm-incta{ margin:8px 0 0; padding:32px; border-radius:var(--radius-lg); background:var(--bg-elevated); box-shadow:var(--shadow-card); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px; }
 .lm-incta *{ box-sizing:border-box; }
 .lm-incta p{ margin:0; font:400 16px/1.5 var(--font-sans); color:var(--navy); max-width:40ch; }
 @media(max-width:640px){ .lm-incta .lm-btn{ width:100%; } }
 
 /* box autora pod wpisem */
-.lm-author{ margin:8px 0; padding-top:28px; border-top:1px solid var(--border-soft); display:flex; gap:18px; align-items:center; }
+.lm-author{ margin:28px 0 8px; padding-top:28px; border-top:1px solid var(--border-soft); display:flex; gap:18px; align-items:center; }
 .lm-author *{ box-sizing:border-box; }
 .lm-author__photo{ width:64px; height:64px; border-radius:50%; overflow:hidden; flex:none; box-shadow:var(--shadow-card); }
 .lm-author__photo img{ width:100%; height:100%; object-fit:cover; display:block; }
