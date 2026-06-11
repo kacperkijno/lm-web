@@ -270,3 +270,9 @@
 .lm-sbar__book{ background:var(--gold-light); color:var(--navy); }
 .lm-sbar__book:active{ filter:brightness(.94); }
 @media(min-width:940px){ .lm-sbar{ display:none; } }
+
+/* ============================ MOBILE: CTA pełna szerokość ============================ */
+.lm-nav__panel .lm-nav__btn{ width:100%; }
+@media(max-width:640px){
+  .lm-btn{ width:100%; }
+}
