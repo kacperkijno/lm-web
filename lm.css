@@ -72,8 +72,9 @@
 
 /* ============================ SKIN LISTY BLOGA (.feed_* WebWave) ============================ */
 .feed_item a, .feed_name_link, .feed_read_more, .feed_short_link, .feed_date a { text-decoration:none !important; }
-.feed_thumbnail_wrapper, .feed_thumbnail { overflow:hidden !important; border-radius:var(--radius-image) !important; }
-.feed_thumbnail_image { object-fit:cover !important; transition:transform var(--dur-slow) var(--ease-out); }
+.feed_thumbnail_wrapper { overflow:hidden !important; border-radius:var(--radius-image) !important; aspect-ratio:4/3 !important; }
+.feed_thumbnail, .feed_thumbnail_image { width:100% !important; height:100% !important; }
+.feed_thumbnail_image { background-size:cover !important; background-position:center !important; transition:transform var(--dur-slow) var(--ease-out); }
 .feed_item:hover .feed_thumbnail_image { transform:scale(1.045); }
 .feed_name_link { font-family:var(--font-headline) !important; font-weight:400 !important; font-size:clamp(18px,2.4vw,21px) !important; color:var(--navy) !important; letter-spacing:-.01em; line-height:1.3 !important; overflow-wrap:break-word; }
 /* zabezpieczenie: nic w karcie nie wychodzi poza szerokość */
