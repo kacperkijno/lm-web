@@ -277,3 +277,11 @@
 @media(max-width:640px){
   .lm-btn{ width:100%; }
 }
+
+/* ============================ SEKCJA BLOG (home): nagłówek + linki wokół natywnej listy ============================ */
+.lm-blog__head{ margin-bottom:clamp(40px,5vw,56px); }
+.lm-blog__all{ margin:48px 0 0 auto; width:fit-content; display:flex; align-items:center; gap:8px; font:600 11px/1 var(--font-headline); letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid transparent; transition:border-color .2s var(--ease-out); }
+.lm-blog__all:hover{ border-bottom-color:var(--gold); }
+.lm-blog__soft{ margin:48px 0 0; font:400 15px/1.6 var(--font-sans); color:color-mix(in srgb,var(--ink) 64%,transparent); }
+.lm-blog__soft a{ color:var(--gold); font-weight:600; border-bottom:1px solid color-mix(in srgb,var(--gold) 45%,transparent); transition:border-color .2s var(--ease-out); }
+.lm-blog__soft a:hover{ border-bottom-color:var(--gold); }
