@@ -28,7 +28,18 @@
   // Przenosimy go do <body>, żeby przykleił się do ekranu i był na wierzchu.
   function initStickyBar(){
     var bar = document.querySelector('.lm-sbar');
-    if(bar && bar.parentElement !== document.body){ document.body.appendChild(bar); }
+    if(!bar) return;
+    // ucieczka z transformowanej sekcji WebWave -> fixed/z-index działają
+    if(bar.parentElement !== document.body){ document.body.appendChild(bar); }
+    // pokaż dopiero po zjechaniu poniżej hero
+    var hero = document.querySelector('.lm-hero');
+    if(hero && 'IntersectionObserver' in window){
+      bar.classList.add('is-hidden');
+      var io = new IntersectionObserver(function(entries){
+        bar.classList.toggle('is-hidden', entries[0].isIntersecting);
+      }, { threshold:0 });
+      io.observe(hero);
+    }
   }
   function init(){ initNav(); initStickyBar(); }
   if(document.readyState === 'loading'){
