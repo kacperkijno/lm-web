@@ -75,7 +75,9 @@
 .feed_thumbnail_wrapper, .feed_thumbnail { overflow:hidden !important; border-radius:var(--radius-image) !important; }
 .feed_thumbnail_image { object-fit:cover !important; transition:transform var(--dur-slow) var(--ease-out); }
 .feed_item:hover .feed_thumbnail_image { transform:scale(1.045); }
-.feed_name_link { font-family:var(--font-headline) !important; font-weight:400 !important; color:var(--navy) !important; letter-spacing:-.01em; line-height:1.32 !important; }
+.feed_name_link { font-family:var(--font-headline) !important; font-weight:400 !important; font-size:clamp(18px,2.4vw,21px) !important; color:var(--navy) !important; letter-spacing:-.01em; line-height:1.3 !important; overflow-wrap:break-word; }
+/* zabezpieczenie: nic w karcie nie wychodzi poza szerokość */
+.feed_item, .feed_item_wrapper, .feed_item_element_wrapper, .feed_data_container, .feed_name, .feed_name_link, .feed_short { max-width:100% !important; overflow-wrap:break-word; }
 .feed_name_link:hover { color:var(--gold) !important; }
 .feed_date { font-family:var(--font-sans) !important; text-transform:uppercase; letter-spacing:.14em; font-size:11px !important; color:var(--gold) !important; }
 .feed_short { font-family:var(--font-sans) !important; font-size:15px !important; color:rgba(26,30,41,.62) !important; line-height:1.6 !important; }
