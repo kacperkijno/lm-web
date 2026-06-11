@@ -217,3 +217,13 @@
 .lm-about__contact{ margin-top:48px; display:flex; flex-direction:column; align-items:flex-start; gap:16px; }
 .lm-about__mail{ font:500 14px/1.5 var(--font-sans); color:var(--gold); border-bottom:1px solid color-mix(in srgb,var(--gold) 40%,transparent); }
 .lm-about__mail:hover{ border-bottom-color:var(--gold); }
+
+/* ============================ SEKCJA 7 — CENNIK ============================ */
+.lm-price{ margin-top:80px; }
+.lm-price__card{ max-width:480px; margin:0 auto; background:var(--bg-elevated); border:1px solid var(--border-soft); border-radius:var(--radius-lg); box-shadow:var(--shadow-card); padding:clamp(32px,5vw,48px); text-align:center; }
+.lm-price__svc{ font:italic 500 26px/1.1 var(--font-display); color:var(--gold); }
+.lm-price__amt{ margin:14px 0 0; font:300 clamp(40px,9vw,56px)/1 var(--font-headline); color:var(--navy); letter-spacing:-.02em; }
+.lm-price__amt span{ font-size:.45em; color:color-mix(in srgb,var(--ink) 55%,transparent); }
+.lm-price__meta{ margin:12px auto 0; max-width:34ch; font:400 14px/1.5 var(--font-sans); color:color-mix(in srgb,var(--ink) 60%,transparent); }
+.lm-price__cta{ margin-top:28px; }
+.lm-price__note{ margin:24px auto 0; max-width:480px; text-align:center; font:400 13.5px/1.6 var(--font-sans); color:color-mix(in srgb,var(--ink) 55%,transparent); }
