@@ -168,6 +168,17 @@
 .lm-offer__small{ margin:18px 0 0; font:400 14px/1.6 var(--font-sans); color:color-mix(in srgb,var(--ink) 56%,transparent); }
 .lm-offer__cta{ margin-top:64px; display:flex; justify-content:flex-end; }
 
+/* --- Linki w treści sekcji (oferta, karty problemów, FAQ) ---
+   Bez tego przeglądarka renderuje je domyślnym #0000EE. Wzorzec jak .lm-blog__soft a. */
+.lm-offer__body p a,
+.lm-prob__card p a,
+.lm-faq__answer a{ color:var(--gold); font-weight:600; border-bottom:1px solid color-mix(in srgb,var(--gold) 45%,transparent); transition:border-color .2s var(--ease-out); }
+.lm-offer__body p a:hover,
+.lm-prob__card p a:hover,
+.lm-faq__answer a:hover{ border-bottom-color:var(--gold); }
+/* Gdy w jednym akapicie stoi kilka linków obok siebie, niech się nie zlewają. */
+.lm-offer__body p a + a{ margin-left:14px; }
+
 /* ============================ SEKCJA 4 — OPINIE (marquee) ============================ */
 .lm-quotes{ margin-top:80px; width:100%; overflow:hidden; padding:8px 0 14px; }
 .lm-quotes-track{ display:flex; flex-wrap:nowrap; width:-webkit-max-content; width:max-content; animation:lm-marquee 55s linear infinite; will-change:transform; -webkit-backface-visibility:hidden; backface-visibility:hidden; }
